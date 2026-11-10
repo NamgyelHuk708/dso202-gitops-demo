@@ -1,0 +1,34 @@
+# =============================================================================
+# File        : argocd/argocd-app.yaml
+# Practical   : DSO202 Practical 4 (GitOps with Argo CD)
+# Purpose     : Registers the webapp with Argo CD declaratively.
+# Apply with  : kubectl apply -f argocd/argocd-app.yaml
+# Note        : Kept OUTSIDE manifests/ so Argo CD does not manage its own
+#               Application object. Argo CD only reads the manifests/ folder.
+# =============================================================================
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-webapp
+  namespace: argocd            # Argo CD Applications live in the argocd namespace
+spec:
+  project: default
+
+  # 1. WHERE IS THE DESIRED STATE? (this small, manifests-focused repository)
+  source:
+    repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+    targetRevision: main
+    path: manifests
+
+  # 2. WHERE SHOULD IT BE DEPLOYED? (the local kind cluster)
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo-app
+
+  # 3. HOW SHOULD ARGO CD SYNC IT?
+  syncPolicy:
+    automated:
+      prune: true        # delete cluster resources whose files were deleted from Git
+      selfHeal: true     # revert manual kubectl changes automatically
+    syncOptions:
+      - CreateNamespace=true

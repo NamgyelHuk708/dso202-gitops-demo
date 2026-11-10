@@ -1,0 +1,38 @@
+# =============================================================================
+# File        : cluster/kind-cluster.yaml
+# Practical   : DSO202 Practical 4 (GitOps with Argo CD)
+# Purpose     : Three-node cluster matching the lab topology: one control-plane
+#               and two workers. Same node names as earlier practicals.
+# Apply with  : kind create cluster --config cluster/kind-cluster.yaml
+# Delete with : kind delete cluster --name dso202-p4
+# =============================================================================
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+
+# Cluster name decides the kubectl context: kind-dso202-p4
+name: dso202-p4
+
+networking:
+  apiServerAddress: "127.0.0.1"
+
+nodes:
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          name: control-plane
+
+  - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          name: worker-node-1
+
+  - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          name: worker-node-2
