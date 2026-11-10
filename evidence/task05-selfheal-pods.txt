@@ -1,0 +1,5 @@
+NAME                             READY   STATUS    RESTARTS   AGE   IP            NODE            NOMINATED NODE   READINESS GATES
+webapp-deploy-6bd9c658d4-6qb9w   1/1     Running   0          57s   10.244.2.11   worker-node-1   <none>           <none>
+webapp-deploy-6bd9c658d4-hbc6c   1/1     Running   0          57s   10.244.2.10   worker-node-1   <none>           <none>
+webapp-deploy-6bd9c658d4-lhpts   1/1     Running   0          57s   10.244.1.11   worker-node-2   <none>           <none>
+webapp-deploy-6bd9c658d4-pv56p   1/1     Running   0          12m   10.244.1.9    worker-node-2   <none>           <none>

@@ -1,0 +1,151 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd.argoproj.io/hydrate: hard
+    argocd.argoproj.io/hydrate-timestamp: "2026-11-10T08:30:32.72995691Z"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"argoproj.io/v1alpha1","kind":"Application","metadata":{"annotations":{},"name":"my-webapp","namespace":"argocd"},"spec":{"destination":{"namespace":"demo-app","server":"https://kubernetes.default.svc"},"project":"default","source":{"path":"manifests","repoURL":"https://github.com/NamgyelHuk708/dso202-gitops-demo.git","targetRevision":"main"},"syncPolicy":{"automated":{"prune":true,"selfHeal":true},"syncOptions":["CreateNamespace=true"]}}}
+  creationTimestamp: "2026-11-10T08:21:56Z"
+  generation: 65
+  name: my-webapp
+  namespace: argocd
+  resourceVersion: "11342"
+  uid: 12d93fd9-5299-47dc-9b23-2725015f1253
+spec:
+  destination:
+    namespace: demo-app
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: manifests
+    repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-11-10T09:36:17Z"
+    status: Healthy
+  history:
+  - deployStartedAt: "2026-11-10T09:24:56Z"
+    deployedAt: "2026-11-10T09:24:56Z"
+    id: 0
+    initiatedBy:
+      automated: true
+    revision: 60d98905ed8770ed08128fe42ed84950bb437d6d
+    source:
+      path: manifests
+      repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+      targetRevision: main
+  - deployStartedAt: "2026-11-10T09:32:06Z"
+    deployedAt: "2026-11-10T09:32:06Z"
+    id: 1
+    initiatedBy:
+      automated: true
+    revision: f927e652170cf23862d3a6f2c53e99cde01ee4a8
+    source:
+      path: manifests
+      repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+      targetRevision: main
+  - deployStartedAt: "2026-11-10T09:39:29Z"
+    deployedAt: "2026-11-10T09:39:29Z"
+    id: 2
+    initiatedBy:
+      automated: true
+    revision: 7d1b48af263199b141e012b1b426991651dc6c00
+    source:
+      path: manifests
+      repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+      targetRevision: main
+  - deployStartedAt: "2026-11-10T09:42:26Z"
+    deployedAt: "2026-11-10T09:42:26Z"
+    id: 3
+    initiatedBy:
+      automated: true
+    revision: 0d65b845558d613a061639df7e304d542d289783
+    source:
+      path: manifests
+      repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+      targetRevision: main
+  operationState:
+    finishedAt: "2026-11-10T09:42:26Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revision: 0d65b845558d613a061639df7e304d542d289783
+        source:
+          path: manifests
+          repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+          targetRevision: main
+        syncOptions:
+        - CreateNamespace=true
+    phase: Succeeded
+    startedAt: "2026-11-10T09:42:26Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/webapp-svc created
+        name: webapp-svc
+        namespace: demo-app
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - nginxdemos/hello:plain-text
+        kind: Deployment
+        message: deployment.apps/webapp-deploy unchanged
+        name: webapp-deploy
+        namespace: demo-app
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: 0d65b845558d613a061639df7e304d542d289783
+      source:
+        path: manifests
+        repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+        targetRevision: main
+  reconciledAt: "2026-11-10T09:45:44Z"
+  resourceHealthSource: appTree
+  resources:
+  - kind: Service
+    name: webapp-svc
+    namespace: demo-app
+    status: Synced
+    version: v1
+  - group: apps
+    kind: Deployment
+    name: webapp-deploy
+    namespace: demo-app
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceType: Directory
+  summary:
+    images:
+    - nginxdemos/hello:plain-text
+  sync:
+    comparedTo:
+      destination:
+        namespace: demo-app
+        server: https://kubernetes.default.svc
+      source:
+        path: manifests
+        repoURL: https://github.com/NamgyelHuk708/dso202-gitops-demo.git
+        targetRevision: main
+    revision: 0d65b845558d613a061639df7e304d542d289783
+    status: Synced

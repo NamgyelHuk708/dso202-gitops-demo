@@ -1,0 +1,2 @@
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+webapp-deploy   4/4     4            4           12m

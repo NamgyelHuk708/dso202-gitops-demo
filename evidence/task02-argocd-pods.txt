@@ -1,0 +1,8 @@
+NAME                                               READY   STATUS            RESTARTS   AGE
+argocd-application-controller-0                    1/1     Running           0          17m
+argocd-applicationset-controller-f6bc6968d-r598l   1/1     Running           0          17m
+argocd-dex-server-55b9777447-nk7zd                 0/1     PodInitializing   0          17m
+argocd-notifications-controller-b9499f64b-68v7z    1/1     Running           0          17m
+argocd-redis-79f897d5d9-w2jm2                      1/1     Running           0          17m
+argocd-repo-server-75fcf89b6b-lkhjf                1/1     Running           0          17m
+argocd-server-67795db55d-9zlr6                     1/1     Running           0          17m

@@ -1,0 +1,4 @@
+docker: 27.4.0
+kind:   kind v0.32.0 go1.26.3 linux/amd64
+Client Version: v1.37.1
+Kustomize Version: v5.8.1

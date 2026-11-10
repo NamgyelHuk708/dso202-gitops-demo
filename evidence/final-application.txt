@@ -1,0 +1,2 @@
+NAME        SYNC STATUS   HEALTH STATUS   REVISION                                   PROJECT
+my-webapp   Synced        Healthy         0d65b845558d613a061639df7e304d542d289783   default

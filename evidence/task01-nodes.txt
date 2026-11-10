@@ -1,0 +1,4 @@
+NAME            STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION             CONTAINER-RUNTIME
+control-plane   Ready    control-plane   67s   v1.36.1   172.26.0.5    <none>        Debian GNU/Linux 13 (trixie)   6.10.14-linuxkit (amd64)   containerd://2.3.1
+worker-node-1   Ready    <none>          53s   v1.36.1   172.26.0.6    <none>        Debian GNU/Linux 13 (trixie)   6.10.14-linuxkit (amd64)   containerd://2.3.1
+worker-node-2   Ready    <none>          53s   v1.36.1   172.26.0.7    <none>        Debian GNU/Linux 13 (trixie)   6.10.14-linuxkit (amd64)   containerd://2.3.1

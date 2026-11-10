@@ -1,0 +1,14 @@
+NAME                                 READY   STATUS    RESTARTS   AGE     IP            NODE            NOMINATED NODE   READINESS GATES
+pod/webapp-deploy-6bd9c658d4-6qb9w   1/1     Running   0          9m45s   10.244.2.11   worker-node-1   <none>           <none>
+pod/webapp-deploy-6bd9c658d4-hbc6c   1/1     Running   0          9m45s   10.244.2.10   worker-node-1   <none>           <none>
+pod/webapp-deploy-6bd9c658d4-lhpts   1/1     Running   0          9m45s   10.244.1.11   worker-node-2   <none>           <none>
+pod/webapp-deploy-6bd9c658d4-pv56p   1/1     Running   0          21m     10.244.1.9    worker-node-2   <none>           <none>
+
+NAME                 TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE     SELECTOR
+service/webapp-svc   ClusterIP   10.96.10.24   <none>        80/TCP    3m35s   app=webapp
+
+NAME                            READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                        SELECTOR
+deployment.apps/webapp-deploy   4/4     4            4           21m   webapp       nginxdemos/hello:plain-text   app=webapp
+
+NAME                                       DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES                        SELECTOR
+replicaset.apps/webapp-deploy-6bd9c658d4   4         4         4       21m   webapp       nginxdemos/hello:plain-text   app=webapp,pod-template-hash=6bd9c658d4

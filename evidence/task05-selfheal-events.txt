@@ -1,0 +1,20 @@
+58s         Normal   SuccessfulDelete    replicaset/webapp-deploy-6bd9c658d4   Deleted pod: webapp-deploy-6bd9c658d4-zb7tt
+58s         Normal   SuccessfulDelete    replicaset/webapp-deploy-6bd9c658d4   Deleted pod: webapp-deploy-6bd9c658d4-4t4xc
+58s         Normal   SuccessfulDelete    replicaset/webapp-deploy-6bd9c658d4   Deleted pod: webapp-deploy-6bd9c658d4-zdgz8
+58s         Normal   Killing             pod/webapp-deploy-6bd9c658d4-4t4xc    Stopping container webapp
+58s         Normal   Killing             pod/webapp-deploy-6bd9c658d4-zb7tt    Stopping container webapp
+58s         Normal   ScalingReplicaSet   deployment/webapp-deploy              Scaled down replica set webapp-deploy-6bd9c658d4 from 4 to 1
+58s         Normal   Killing             pod/webapp-deploy-6bd9c658d4-zdgz8    Stopping container webapp
+57s         Normal   Created             pod/webapp-deploy-6bd9c658d4-hbc6c    Container created
+57s         Normal   Pulled              pod/webapp-deploy-6bd9c658d4-hbc6c    Container image "nginxdemos/hello:plain-text" already present on machine and can be accessed by the pod
+57s         Normal   Pulled              pod/webapp-deploy-6bd9c658d4-6qb9w    Container image "nginxdemos/hello:plain-text" already present on machine and can be accessed by the pod
+57s         Normal   Pulled              pod/webapp-deploy-6bd9c658d4-lhpts    Container image "nginxdemos/hello:plain-text" already present on machine and can be accessed by the pod
+57s         Normal   SuccessfulCreate    replicaset/webapp-deploy-6bd9c658d4   Created pod: webapp-deploy-6bd9c658d4-hbc6c
+57s         Normal   SuccessfulCreate    replicaset/webapp-deploy-6bd9c658d4   Created pod: webapp-deploy-6bd9c658d4-6qb9w
+57s         Normal   SuccessfulCreate    replicaset/webapp-deploy-6bd9c658d4   Created pod: webapp-deploy-6bd9c658d4-lhpts
+57s         Normal   Created             pod/webapp-deploy-6bd9c658d4-6qb9w    Container created
+57s         Normal   Created             pod/webapp-deploy-6bd9c658d4-lhpts    Container created
+57s         Normal   ScalingReplicaSet   deployment/webapp-deploy              Scaled up replica set webapp-deploy-6bd9c658d4 from 1 to 4
+56s         Normal   Started             pod/webapp-deploy-6bd9c658d4-6qb9w    Container started
+56s         Normal   Started             pod/webapp-deploy-6bd9c658d4-hbc6c    Container started
+56s         Normal   Started             pod/webapp-deploy-6bd9c658d4-lhpts    Container started

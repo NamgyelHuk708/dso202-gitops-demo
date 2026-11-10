@@ -1,0 +1,4 @@
+0d65b84 Revert "Remove webapp service (prune test)"
+7d1b48a Remove webapp service (prune test)
+f927e65 Scale webapp to 4 replicas
+60d9890 Initial deployment with 2 replicas
